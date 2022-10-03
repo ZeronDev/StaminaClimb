@@ -2,9 +2,7 @@ package com.Mort.StaminaClimb.ConfigDataFile
 
 import net.kyori.adventure.bossbar.BossBar
 import net.kyori.adventure.text.Component.text
-import org.bukkit.Location
 import org.bukkit.Material
-import org.bukkit.block.Block
 import org.bukkit.entity.Player
 import java.util.*
 
@@ -14,7 +12,6 @@ object DataResource {
     val unable: MutableList<Material> = mutableListOf(Material.LAVA, Material.WATER, Material.VOID_AIR, Material.CAVE_AIR, Material.AIR)
     val sneakList: MutableList<Player> = mutableListOf()
     val climbPlayer: MutableMap<UUID, Boolean> = mutableMapOf()
-    var Display: String = "보스바" // 보스바 OR 액션바
     val taskIdMap: MutableMap<Player, Int> = mutableMapOf()
     val bossbarMap: MutableMap<Player, BossBar> = mutableMapOf()
 

@@ -7,10 +7,9 @@ import net.kyori.adventure.bossbar.BossBar
 import org.bukkit.entity.Player
 
 class RegenScheduler(val p: Player) : Runnable {
-
     val bossbar = bossbarMap[p]!!
     private var progress = bossbar.progress().toDouble()
-    private val time = 1 / (DataResource.timeLimit.toDouble() * 20)
+    private val time = 1 / (DataResource.timeLimit.toDouble() * 20) - 0.1
 
     override fun run() {
         bossbarMap[p] = bossbar

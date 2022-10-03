@@ -17,7 +17,7 @@ class JoinBossBarScheduler(val p: Player) : Runnable {
         if (Listener.checkAble(p.location)) {
             bossbarMap[p] = bossbar
             p.fallDistance = 0f
-            p.velocity = Vector(0.0, 0.1, 0.0)
+            p.velocity = Vector(0.0, 0.2, 0.0)
             progress -= time
             if (progress <= 0) {
                 regen(p)

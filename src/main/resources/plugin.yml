@@ -3,6 +3,3 @@ version: 1.0.0
 api-version: 1.17
 author: Zeron
 main: com.Mort.StaminaClimb.MainCore
-commands:
-  staminaclimb:
-    aliases: ['스태미나클라임']

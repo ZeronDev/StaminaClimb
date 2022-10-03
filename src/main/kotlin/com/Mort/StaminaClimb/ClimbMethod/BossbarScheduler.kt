@@ -23,7 +23,7 @@ class BossbarScheduler(val p: Player) : Runnable {
     override fun run() {
         if (checkAble(p.location)) {
             bossbarMap[p] = bossbar
-            p.velocity = Vector(0.0, 0.1, 0.0)
+            p.velocity = Vector(0.0, 0.2, 0.0)
             p.fallDistance = 0f
             progress -= time
             if (progress <= 0) {

@@ -1,6 +1,5 @@
 package com.Mort.StaminaClimb.ConfigDataFile
 
-import com.Mort.StaminaClimb.ConfigDataFile.DataResource.Display
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.climbPlayer
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.prefix
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.timeLimit
@@ -20,45 +19,11 @@ object ConfigSystem {
         }
     }
 
-    fun readDisplay() {
-        try {
-            Display = plugin.config.getString("DisplayMethod")!!
-        } catch (e: Exception) {
-            plugin.logger.info("$prefix 예기치 못한 오류가 발생하였습니다.")
-            Bukkit.getPluginManager().disablePlugin(plugin)
-        }
-    }
-
-    fun readMode() {
-        try {
-            with(plugin) {
-                config.getConfigurationSection("ClimbBlockMode")!!.getKeys(false).forEach {
-                    climbPlayer.put(UUID.fromString(it), config.getBoolean("ClimbBlockMode.${it}"))
-                }
-            }
-        } catch (e: Exception) {
-            plugin.logger.info("$prefix 예기치 못한 오류가 발생하였습니다.")
-            Bukkit.getPluginManager().disablePlugin(plugin)
-        }
-    }
-
     fun readTimeLimit() {
         timeLimit = plugin.config.getInt("TimeLimit")
     }
 
     fun saveTimeLimit() {
         plugin.config.set("TimeLimit", timeLimit)
-    }
-
-    fun saveDisplayMethod() {
-        plugin.config.set("DisplayMethod", Display)
-    }
-
-    fun saveMode(uuid: UUID, context: Boolean) {
-        with(plugin) {
-            if (!dataFolder.exists()) { saveDefaultConfig(); return }
-            config.set("ClimbBlockMode.${uuid}", context)
-            saveConfig()
-        }
     }
 }
