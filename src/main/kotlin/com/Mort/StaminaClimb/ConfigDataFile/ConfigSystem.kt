@@ -1,11 +1,9 @@
 package com.Mort.StaminaClimb.ConfigDataFile
 
-import com.Mort.StaminaClimb.ConfigDataFile.DataResource.climbPlayer
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.prefix
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.timeLimit
 import com.Mort.StaminaClimb.MainCore.Companion.plugin
 import org.bukkit.Bukkit
-import java.util.*
 
 object ConfigSystem {
     // 루콘 구독과 좋아요

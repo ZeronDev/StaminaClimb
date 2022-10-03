@@ -4,25 +4,17 @@ import com.Mort.StaminaClimb.ClimbMethod.Climb.climb
 import com.Mort.StaminaClimb.ClimbMethod.Climb.finish
 import com.Mort.StaminaClimb.ClimbMethod.Climb.join
 import com.Mort.StaminaClimb.ClimbMethod.Climb.regen
-import com.Mort.StaminaClimb.ConfigDataFile.DataResource.climbPlayer
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.sneakList
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.taskIdMap
 import com.Mort.StaminaClimb.ConfigDataFile.DataResource.unable
-import com.Mort.StaminaClimb.MainCore.Companion.plugin
-import org.bukkit.Bukkit
 import org.bukkit.Location
-import org.bukkit.NamespacedKey
-import org.bukkit.block.TileState
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.block.BlockPlaceEvent
 import org.bukkit.event.entity.PlayerDeathEvent
 import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.event.player.PlayerToggleSneakEvent
-import org.bukkit.metadata.FixedMetadataValue
-import org.bukkit.persistence.PersistentDataType
 
 class Listener : Listener {
     @EventHandler
@@ -74,13 +66,6 @@ class Listener : Listener {
         if (taskIdMap.contains(e.player)) {
             finish(e.player)
             sneakList.remove(e.player)
-        }
-    }
-
-    @EventHandler
-    fun onJoin(e: PlayerJoinEvent) {
-        if (!climbPlayer.containsKey(e.player.uniqueId)) {
-            climbPlayer.put(e.player.uniqueId, false)
         }
     }
 

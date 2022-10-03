@@ -15,7 +15,7 @@ import java.io.File
 
 class MainCore : JavaPlugin() {
 
-    // 루콘을 위하여
+    // 루콘을 ㅁㅇㄹ
 
     companion object {
         lateinit var plugin: Plugin
@@ -26,7 +26,7 @@ class MainCore : JavaPlugin() {
         plugin = this
         if (!dataFolder.exists()) {
 
-            config.addDefault("prefix", "[ §eCLIMB §f]")
+            config.addDefault("prefix", "[ §6CLIMB §f]")
             config.addDefault("TimeLimit", 10)
             config.options().copyDefaults(true)
             saveConfig()
