@@ -15,7 +15,7 @@ import java.io.File
 
 class MainCore : JavaPlugin() {
 
-    // 루콘을 ㅁㅇㄹ
+    // 헤ㅔ헤헤헤헿
 
     companion object {
         lateinit var plugin: Plugin
