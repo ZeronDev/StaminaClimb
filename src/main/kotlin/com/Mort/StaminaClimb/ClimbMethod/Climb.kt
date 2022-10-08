@@ -20,10 +20,6 @@ object Climb {
             Bukkit.getScheduler().cancelTask(taskIdMap[p]!!)
             taskIdMap.remove(p)
             bossbarMap.remove(p)
-        } else if (taskIdMap.containsKey(p)) {
-            Bukkit.getScheduler().cancelTask(taskIdMap[p]!!)
-            taskIdMap.remove(p)
-            p.sendActionBar(Component.text(" "))
         }
     }
     fun regen(p: Player) {
