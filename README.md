@@ -1,4 +1,4 @@
 # StaminaClimb
-루콘 화이팅!
+평범한 벽타기 플러그인!
 
-100만 가자!
+My fortpolio
