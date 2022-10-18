@@ -15,7 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable
 import org.bukkit.util.Vector
 
 class BossbarScheduler(val p: Player) : Runnable {
-    // 루콘 최고
+
 
     private var progress = 1.0
     private val time = progress / (timeLimit.toDouble() * 20)
