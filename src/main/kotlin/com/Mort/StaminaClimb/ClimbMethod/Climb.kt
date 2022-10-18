@@ -10,7 +10,7 @@ import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 
 object Climb {
-    // 루콘님 화이팅
+    // 오징어
     fun climb(p: Player) {
        bossbar(p)
     }
