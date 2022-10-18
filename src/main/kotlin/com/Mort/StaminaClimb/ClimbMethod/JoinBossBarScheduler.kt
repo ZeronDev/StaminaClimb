@@ -9,7 +9,7 @@ import org.bukkit.entity.Player
 import org.bukkit.util.Vector
 
 class JoinBossBarScheduler(val p: Player) : Runnable {
-    // 저도 시참에 참여하고 싶지만 전 잼민이라 ㅋㅋ큐ㅠㅠ
+    // bla
     private var bossbar = bossbarMap[p]!!
     private var progress = bossbar.progress().toDouble()
     private val time = 1 / (DataResource.timeLimit.toDouble() * 20)
