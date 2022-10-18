@@ -6,7 +6,7 @@ import com.Mort.StaminaClimb.MainCore.Companion.plugin
 import org.bukkit.Bukkit
 
 object ConfigSystem {
-    // 루콘 구독과 좋아요
+    
 
     fun readPrefix() {
         try {
